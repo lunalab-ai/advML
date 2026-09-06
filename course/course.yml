@@ -17,6 +17,7 @@ sessions:
   labs: []
   runtime_label: Optional external notebooks in lecture references
   quiz: course/quiz/w01a.yml
+  notion_url: https://app.notion.com/p/Class_01_Course_Orientation_and_Probabilistic_Foundations-3ce7fd00109f8120968cfa2093e362b1?source=copy_link
 - id: w01b
   date: '2026-09-03'
   title: Mathematical Foundations for Probabilistic Machine Learning
@@ -25,6 +26,7 @@ sessions:
   labs: []
   runtime_label: Official external notebooks in lecture references
   quiz: course/quiz/w01b.yml
+  notion_url: https://app.notion.com/p/Class-02-Mathematical-Foundations-for-Probabilistic-Machine-Learning-3d07fd00109f81c693a4c2e2ed8405f3?source=copy_link
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true

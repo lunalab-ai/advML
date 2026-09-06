@@ -8,8 +8,8 @@ Graduate-level probabilistic machine learning: models, inference, prediction, ge
 
 | Session | Date | Topic | Lecture notes | Quiz explanations | Practice | Runtime |
 |---|---|---|---|---|---|---|
-| w01a | 2026-09-01 | Course Orientation and the Probabilistic View of Advanced Machine Learning | [MD](course/notion/w01a/w01a-course-orientation.md) · [PDF](course/handouts/w01a-course-orientation.pdf) | [MD](course/handouts/w01a-quiz.md) · [PDF](course/handouts/w01a-quiz.pdf) | — | Optional external notebooks in lecture references |
-| w01b | 2026-09-03 | Mathematical Foundations for Probabilistic Machine Learning | [MD](course/notion/w01b/w01b-mathematical-foundations.md) · [PDF](course/handouts/w01b-mathematical-foundations.pdf) | [MD](course/handouts/w01b-quiz.md) · [PDF](course/handouts/w01b-quiz.pdf) | — | Official external notebooks in lecture references |
+| w01a | 2026-09-01 | Course Orientation and the Probabilistic View of Advanced Machine Learning | [MD](course/notion/w01a/w01a-course-orientation.md) · [PDF](course/handouts/w01a-course-orientation.pdf) · [Notion](https://app.notion.com/p/Class_01_Course_Orientation_and_Probabilistic_Foundations-3ce7fd00109f8120968cfa2093e362b1?source=copy_link) | [MD](course/handouts/w01a-quiz.md) · [PDF](course/handouts/w01a-quiz.pdf) | — | Optional external notebooks in lecture references |
+| w01b | 2026-09-03 | Mathematical Foundations for Probabilistic Machine Learning | [MD](course/notion/w01b/w01b-mathematical-foundations.md) · [PDF](course/handouts/w01b-mathematical-foundations.pdf) · [Notion](https://app.notion.com/p/Class-02-Mathematical-Foundations-for-Probabilistic-Machine-Learning-3d07fd00109f81c693a4c2e2ed8405f3?source=copy_link) | [MD](course/handouts/w01b-quiz.md) · [PDF](course/handouts/w01b-quiz.pdf) | — | Official external notebooks in lecture references |
 
 ## Course overview
 
