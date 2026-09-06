@@ -9,6 +9,8 @@
 
 ---
 
+> **Session numbering:** Class 02 (w01b) was the first actual class. The semester started on Wednesday, so the schedule label Class 02 was retained; no separate Class 01 took place.
+
 ## Learning objectives
 
 By the end of this class, you should be able to:
@@ -28,7 +30,7 @@ By the end of this class, you should be able to:
 
 | Time | Topic | Central question |
 |---:|---|---|
-| 0–4 min | Retrieval from Class 01 | What did we understand only superficially last time? |
+| 0–4 min | Prior-knowledge check | What do we already know about probability, statistics, and optimization? |
 | 4–24 min | Probability foundations | How do we represent, combine, and update uncertainty? |
 | 24–44 min | Statistical learning | How does observed data change what we believe about unknown parameters? |
 | 44–62 min | Optimization foundations | How do we compute the estimates or approximations required by learning? |
