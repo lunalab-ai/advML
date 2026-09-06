@@ -1,10 +1,26 @@
-# 전체 참고자료
+# References
 
-[강의 홈](../README.md)
+[Course home](../README.md)
+
+## Course Orientation and the Probabilistic View of Advanced Machine Learning
+
+[Lecture source](../course/notion/w01a/w01a-course-orientation.md)
+
+https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/book1/02/prob.ipynb
+
+https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/book1/04/bayes_intro.ipynb
+
+https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/book1/08/opt_jax.ipynb
+
+https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/book1/08/steepestDescentDemo.ipynb
+
+https://github.com/lunalab-ai/advML
+
+https://github.com/probml/pyprobml/tree/master/notebooks/book2
 
 ## Mathematical Foundations for Probabilistic Machine Learning
 
-[강의 원문](../course/notion/w01b/w01b-mathematical-foundations.md)
+[Lecture source](../course/notion/w01b/w01b-mathematical-foundations.md)
 
 https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/book1/02/prob.ipynb
 

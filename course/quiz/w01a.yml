@@ -1,0 +1,25 @@
+source: course/notion/w01a/w01a-course-orientation.md
+provenance: Questions and compact answers reproduced from the instructor-provided
+  Class 01 Notion archive. Full bilingual speaker scripts remain private.
+items:
+- question: What is the difference between $p(y\mid x)$ and $p(x\mid y)$?
+  answer: They condition in opposite directions and are related by Bayes' rule, not
+    by symmetry.
+- question: Why does independence imply zero covariance, while zero covariance does
+    not generally imply independence?
+  answer: Covariance captures only linear dependence; nonlinear dependence may remain.
+- question: Why is minimizing cross-entropy often equivalent to maximum likelihood
+    estimation?
+  answer: Cross-entropy is the NLL for Bernoulli or categorical observation models.
+- question: How does a prior become a regularization term in MAP estimation?
+  answer: The negative log-prior is added to the NLL.
+- question: What is the difference between aleatoric and epistemic uncertainty?
+  answer: Aleatoric uncertainty is intrinsic data variability; epistemic uncertainty
+    reflects limited knowledge.
+- question: Why can a large learning rate cause divergence even for a convex objective?
+  answer: The update can overshoot along directions of high curvature and oscillate
+    or diverge.
+- question: What is lost when $p(\theta\mid\mathcal{D})$ is replaced by a point estimate
+    $\hat\theta$?
+  answer: Parameter uncertainty and model averaging are discarded, often producing
+    overconfident predictions.

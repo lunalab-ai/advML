@@ -1,13 +1,22 @@
 schema_version: 1
 id: advanced-ml
-title: 인공지능을 위한 고급 기계학습
-description: 인공지능을 위한 고급 기계학습 강의자료
+title: Advanced Machine Learning for Artificial Intelligence
+description: 'Graduate-level probabilistic machine learning: models, inference, prediction,
+  generation, discovery, and decision making.'
 repository: lunalab-ai/advML
 semester: 2026-2
 runtime: none
 language: en
 overview: course/overview.md
 sessions:
+- id: w01a
+  date: '2026-09-01'
+  title: Course Orientation and the Probabilistic View of Advanced Machine Learning
+  pages:
+  - course/notion/w01a/w01a-course-orientation.md
+  labs: []
+  runtime_label: Optional external notebooks in lecture references
+  quiz: course/quiz/w01a.yml
 - id: w01b
   date: '2026-09-03'
   title: Mathematical Foundations for Probabilistic Machine Learning
@@ -19,3 +28,7 @@ sessions:
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
+level: graduate
+instructor_languages:
+- en
+- ko

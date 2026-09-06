@@ -221,12 +221,17 @@ def hub(root, config):
         + "\n".join(parts[parts.index("## 수업 자료") :])
         + "\n",
     )
-    refs = ["# 전체 참고자료", "[강의 홈](../README.md)"]
+    if config.get("language") == "en":
+        translations = {"## 수업 자료": "## Class materials", "| 차시 | 날짜 | 주제 | 강의노트 | 퀴즈 해설 | 실습 | 실행 |": "| Session | Date | Topic | Lecture notes | Quiz explanations | Practice | Runtime |", "## 보충 실습 자료": "## Supplementary practice", "| 자료 | 실습 | 퀴즈 해설 |": "| Material | Practice | Quiz explanations |", "## 교재와 참고자료": "## Textbooks and references", "전체 참고자료와 차시별 출처": "References and session sources", "기초 실습 안내": "Prerequisites and practice preparation", "일정 미확정": "Date to be confirmed"}
+        text = (root / "README.md").read_text(encoding="utf-8")
+        for original, translated in translations.items(): text = text.replace(original, translated)
+        write(root / "README.md", text)
+    refs = ["# References", "[Course home](../README.md)"] if config.get("language") == "en" else ["# 전체 참고자료", "[강의 홈](../README.md)"]
     for s in config["sessions"]:
         refs.append("## " + s["title"])
         for p in s["pages"]:
             text = safe(root, p).read_text(encoding="utf-8")
-            refs.append(f"[강의 원문](../{p})")
+            refs.append(f"[Lecture source](../{p})" if config.get("language") == "en" else f"[강의 원문](../{p})")
             section = re.search(r"^## 참고[^\n]*\n(.*?)(?=^## |\Z)", text, re.M | re.S)
             if section:
                 refs.append(section[1].strip())
@@ -234,9 +239,27 @@ def hub(root, config):
     write(root / "course/references.md", "\n\n".join(refs) + "\n")
 
 
+def validate_course_contract(root, c):
+    if c.get("required_instructor_scripts"):
+        for session in c["sessions"]:
+            scripts = session.get("instructor_scripts", {})
+            for language in c.get("instructor_languages", ["en", "ko"]):
+                rel = scripts.get(language, "")
+                if not rel.startswith("instructor/"): raise ValueError("Missing private speaker script: " + session["id"] + "/" + language)
+                path = safe(root, rel)
+                if not path.is_file() or not path.read_text(encoding="utf-8").strip(): raise ValueError("Empty/missing speaker script: " + rel)
+            if len(set(scripts.values())) != len(scripts): raise ValueError("Use distinct files for bilingual scripts")
+    if c.get("language") == "en":
+        for folder in ["course/notion", "course/handouts", "notebooks/student", "labs/student"]:
+            for p in (root / folder).rglob("*"):
+                if p.is_file() and p.suffix in {".md", ".qmd", ".py", ".R", ".ipynb"} and re.search(r"[가-힣]", p.read_text(encoding="utf-8")):
+                    raise ValueError("English student material contains Korean text: " + str(p.relative_to(root)))
+
+
 def build(root=ROOT):
     (root / ".build/build.json").unlink(missing_ok=True)
     c = load(root)
+    validate_course_contract(root, c)
     if (root / "notebooks/source").exists():
         from build_notebooks import build_all
 
@@ -404,6 +427,12 @@ def stage(root=ROOT):
             if rel == ".github/workflows/materials.yml" and (root / "scripts/public-materials.yml").exists():
                 source = root / "scripts/public-materials.yml"
             shutil.copy2(source, dst)
+    public_config_path = candidate / "course/course.yml"
+    if public_config_path.exists():
+        public_config = yaml.safe_load(public_config_path.read_text(encoding="utf-8"))
+        public_config.pop("required_instructor_scripts", None)
+        for session in public_config.get("sessions", []): session.pop("instructor_scripts", None)
+        write(public_config_path, yaml.safe_dump(public_config, allow_unicode=True, sort_keys=False))
     errors = scan(candidate)
     if errors:
         raise ValueError("\n".join(f"{e.path}: {e.message}" for e in errors))
