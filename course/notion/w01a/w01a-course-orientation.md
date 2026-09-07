@@ -5,7 +5,7 @@
 > **Advanced Machine Learning for Artificial Intelligence**  
 > **Prof. Wonsang You, Data Science, Dongduk Women's University**  
 > **Fall Semester, 2026 · DSC1002 · 3 credits**  
-> **Regular meetings:** Tuesday and Thursday, 10:30–11:45  
+> **Schedule update, effective September 8:** Tuesday, 13:00–15:00 (one continuous meeting per week)  
 > **Today's shortened meeting:** approximately 40 minutes
 
 ---

@@ -1,11 +1,13 @@
 ## Course overview
 
-Graduate course · Fall 2026 · Dongduk Women’s University · Prof. Wonsang You.
+Graduate course · Fall 2026 · Dongduk Women's University · Prof. Wonsang You.
 
-This English-medium course studies advanced machine learning through probabilistic models and inference. Students connect model assumptions, mathematical derivations, optimization, uncertainty and empirical evaluation.
+This English-medium course connects probabilistic models, inference, prediction, generation, discovery and decision making. Main textbook: Kevin P. Murphy, *Probabilistic Machine Learning: Advanced Topics*. Supplementary review: *Probabilistic Machine Learning: An Introduction*.
 
-Main textbook: Kevin P. Murphy, *Probabilistic Machine Learning: Advanced Topics*. Supplementary review: *Probabilistic Machine Learning: An Introduction*.
+**From Week 2 (September 8): Tuesday 13:00–15:00, Asia/Seoul, one continuous two-hour meeting each week.** New sessions are labeled W2, W3, and so on. Historical Class 01 (September 1, w01a) and Class 02 (September 3, w01b) links are preserved.
 
-Class 01 took place on September 1, 2026; Class 02 on September 3, 2026. The Class 01 notes include the semester roadmap, assessment policies, prerequisites and a diagnostic review of probability, statistics and optimization. Class 02 develops these mathematical foundations further.
+Each new lesson includes a course notebook with automatic preparation in Colab. CPU is sufficient unless a lesson explicitly says otherwise. Read prediction and debugging prompts before executing cells. Reusable code accumulates in the course repository and each notebook uses a checked fixed revision.
 
-Official external notebooks are linked from the lessons. These links are optional resources and are not evidence of local execution.
+Projects are assigned in selected weeks, each with a 10-point rubric; check SmartClass for the actual deadline and submission entry. W2 includes a project on exact and approximate graphical-model inference. Quiz explanations are separate from assessed project work.
+
+Official textbook notebooks are additional references. Their presence or an external link is not a claim that every upstream notebook has been executed in this course environment.

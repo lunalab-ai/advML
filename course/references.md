@@ -51,3 +51,27 @@ https://github.com/probml/pyprobml/tree/master/notebooks/book1/08
 https://github.com/probml/pyprobml/tree/master/notebooks/book1/11
 
 https://github.com/probml/pyprobml/tree/master/notebooks/book2
+
+## Graphical Models, Conditional Independence, and Message Passing
+
+[Lecture source](../course/notion/w2/w2-graphical-models.md)
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-message-passing.ipynb
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-project-starter.ipynb
+
+https://github.com/lunalab-ai/advML/blob/main/course/handouts/w2-quiz.md
+
+https://github.com/lunalab-ai/advML/blob/main/course/notion/w2/w2-project.md
+
+https://github.com/lunalab-ai/advML/blob/main/notebooks/student/w2-message-passing.ipynb
+
+https://github.com/lunalab-ai/advML/blob/main/src/advml_pgm.py
+
+https://github.com/probml/pyprobml/tree/master/notebooks/book2
+
+https://probml.github.io/pml-book/book2.html
+
+https://www.cs.cmu.edu/~epxing/Class/10708-19/notes/lecture-04/
+
+https://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html

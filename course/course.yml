@@ -27,6 +27,56 @@ sessions:
   runtime_label: Official external notebooks in lecture references
   quiz: course/quiz/w01b.yml
   notion_url: https://app.notion.com/p/Class-02-Mathematical-Foundations-for-Probabilistic-Machine-Learning-3d07fd00109f81c693a4c2e2ed8405f3?source=copy_link
+- id: w2
+  date: '2026-09-08'
+  title: Graphical Models, Conditional Independence, and Message Passing
+  pages:
+  - course/notion/w2/w2-graphical-models.md
+  labs:
+  - notebooks/student/w2-message-passing.ipynb
+  - notebooks/student/w2-project-starter.ipynb
+  runtime: python
+  assignment:
+    requested: true
+    page: course/notion/w2/w2-project.md
+    starter: notebooks/student/w2-project-starter.ipynb
+    total_points: 10
+    deadline: As displayed in SmartClass
+    rubric:
+    - criterion: Derivation
+      points: 2
+    - criterion: Exact correction and validation
+      points: 2
+    - criterion: Counterexample study
+      points: 2
+    - criterion: Original extension
+      points: 2
+    - criterion: Reproducibility
+      points: 1
+    - criterion: Written defense
+      points: 1
+    notice_summary: Investigate when converged message passing gives inaccurate posterior
+      marginals. Design your own tree/cycle/frustration experiments; derive and implement
+      exact cycle inference by conditioning a node; then propose a theory-based extension
+      and test it on unused seeds and an unseen regime. The project includes numerical
+      invariance tests, an ablation and a 60-node scalability demonstration. Read
+      the full specification before beginning.
+    submission_instructions: 'Submit one ZIP through the SmartClass assignment entry:
+      report.pdf, executed project.ipynb, your implementation and README, complete
+      results table, tests, and assistance.md. The supplied starter is intentionally
+      unfinished. A well-supported negative result can receive full credit. Existing
+      course integrity and late-submission policies apply.'
+  duration_minutes: 120
+  quiz: course/quiz/w2.yml
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-message-passing.ipynb
+  announcement_guidance:
+  - From Week 2, the class meets Tuesday 13:00–15:00 (Asia/Seoul), once per week.
+  - Use a CPU runtime. Supporting code downloads automatically; no dataset upload
+    is needed.
+  - Read the prediction prompts before running cells. Unfinished exercises do not
+    block later demonstrations.
+  - W2 includes a 10-point project. Use the separate SmartClass assignment entry for
+    the deadline and submission.
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
@@ -34,3 +84,18 @@ level: graduate
 instructor_languages:
 - en
 - ko
+schedule:
+  day: Tuesday
+  start: '13:00'
+  end: '15:00'
+  timezone: Asia/Seoul
+  minutes: 120
+  effective_from: '2026-09-08'
+  session_numbering: w2, w3, ...; preserve w01a/w01b historical links
+lesson_policy:
+  automatic_notebooks: true
+  ask_assignment: true
+  assignment_total: 10
+  legacy_sessions:
+  - w01a
+  - w01b

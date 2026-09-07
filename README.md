@@ -10,18 +10,21 @@ Graduate-level probabilistic machine learning: models, inference, prediction, ge
 |---|---|---|---|---|---|---|
 | w01a | 2026-09-01 | Course Orientation and the Probabilistic View of Advanced Machine Learning | [MD](course/notion/w01a/w01a-course-orientation.md) · [PDF](course/handouts/w01a-course-orientation.pdf) · [Notion](https://app.notion.com/p/Class_01_Course_Orientation_and_Probabilistic_Foundations-3ce7fd00109f8120968cfa2093e362b1?source=copy_link) | [MD](course/handouts/w01a-quiz.md) · [PDF](course/handouts/w01a-quiz.pdf) | — | Optional external notebooks in lecture references |
 | w01b | 2026-09-03 | Mathematical Foundations for Probabilistic Machine Learning | [MD](course/notion/w01b/w01b-mathematical-foundations.md) · [PDF](course/handouts/w01b-mathematical-foundations.pdf) · [Notion](https://app.notion.com/p/Class-02-Mathematical-Foundations-for-Probabilistic-Machine-Learning-3d07fd00109f81c693a4c2e2ed8405f3?source=copy_link) | [MD](course/handouts/w01b-quiz.md) · [PDF](course/handouts/w01b-quiz.pdf) | — | Official external notebooks in lecture references |
+| w2 | 2026-09-08 | Graphical Models, Conditional Independence, and Message Passing | [MD](course/notion/w2/w2-graphical-models.md) · [PDF](course/handouts/w2-graphical-models.pdf) | [MD](course/handouts/w2-quiz.md) · [PDF](course/handouts/w2-quiz.pdf) | [ipynb](notebooks/student/w2-message-passing.ipynb) · [ipynb](notebooks/student/w2-project-starter.ipynb) | [Colab](https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-message-passing.ipynb) |
 
 ## Course overview
 
-Graduate course · Fall 2026 · Dongduk Women’s University · Prof. Wonsang You.
+Graduate course · Fall 2026 · Dongduk Women's University · Prof. Wonsang You.
 
-This English-medium course studies advanced machine learning through probabilistic models and inference. Students connect model assumptions, mathematical derivations, optimization, uncertainty and empirical evaluation.
+This English-medium course connects probabilistic models, inference, prediction, generation, discovery and decision making. Main textbook: Kevin P. Murphy, *Probabilistic Machine Learning: Advanced Topics*. Supplementary review: *Probabilistic Machine Learning: An Introduction*.
 
-Main textbook: Kevin P. Murphy, *Probabilistic Machine Learning: Advanced Topics*. Supplementary review: *Probabilistic Machine Learning: An Introduction*.
+**From Week 2 (September 8): Tuesday 13:00–15:00, Asia/Seoul, one continuous two-hour meeting each week.** New sessions are labeled W2, W3, and so on. Historical Class 01 (September 1, w01a) and Class 02 (September 3, w01b) links are preserved.
 
-Class 01 took place on September 1, 2026; Class 02 on September 3, 2026. The Class 01 notes include the semester roadmap, assessment policies, prerequisites and a diagnostic review of probability, statistics and optimization. Class 02 develops these mathematical foundations further.
+Each new lesson includes a course notebook with automatic preparation in Colab. CPU is sufficient unless a lesson explicitly says otherwise. Read prediction and debugging prompts before executing cells. Reusable code accumulates in the course repository and each notebook uses a checked fixed revision.
 
-Official external notebooks are linked from the lessons. These links are optional resources and are not evidence of local execution.
+Projects are assigned in selected weeks, each with a 10-point rubric; check SmartClass for the actual deadline and submission entry. W2 includes a project on exact and approximate graphical-model inference. Quiz explanations are separate from assessed project work.
+
+Official textbook notebooks are additional references. Their presence or an external link is not a claim that every upstream notebook has been executed in this course environment.
 
 ## Textbooks and references
 

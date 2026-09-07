@@ -1,0 +1,45 @@
+source: course/notion/w2/w2-graphical-models.md
+provenance: Original checkpoint explanations aligned with the W2 lecture. These are
+  not project solutions.
+items:
+- question: What must be specified before the expression “perform inference” defines
+    a mathematical task?
+  answer: Specify the model/parameters, observed variables and values, query variables,
+    nuisance variables and desired output (for example a normalized marginal, joint
+    MAP, evidence probability or expectation). Conditioning and summation must be
+    explicit.
+- question: Why does observing the middle node block a chain but potentially activate
+    a collider?
+  answer: In a chain, the factorization conditioned on the middle separates the endpoint
+    factors. In a collider, conditioning introduces a likelihood involving both parents,
+    which generally couples them. Observing a collider descendant can also activate
+    the path.
+- question: Does failure of d-separation prove dependence for every parameter choice?
+  answer: No. It means the graph does not guarantee independence. Special parameters
+    can create additional independences. D-separation implies independence for distributions
+    that factorize over the DAG; the converse for a particular distribution needs
+    stronger assumptions.
+- question: Why is a message from i to j indexed by the state of j?
+  answer: It sums out the sender-side variables while holding the boundary variable
+    at the recipient fixed. The result summarizes how that entire component weights
+    each possible recipient state.
+- question: In the worked chain, why is the product [0.2356, 0.2508] not yet a posterior
+    distribution?
+  answer: Its entries sum to the evidence probability 0.4864, not one. Dividing by
+    that sum gives [0.484375, 0.515625]. Arbitrary message scaling preserves normalized
+    marginals but requires scale bookkeeping to recover evidence mass.
+- question: Can independently chosen marginal modes differ from joint MAP?
+  answer: Yes. In the displayed joint table the joint maximum is (0,0), while the
+    marginal modes are A=1 and B=0. Summation and maximization answer different queries;
+    marginal decisions can also violate joint constraints.
+- question: What is the difference between filtering and smoothing, and why does it
+    matter for evaluation?
+  answer: Filtering uses observations only through the current time. Smoothing additionally
+    uses future observations. Reporting smoothing performance as online filtering
+    performance leaks information unavailable to the online system.
+- question: What can a small loopy-BP message residual establish, and what can it
+    not establish?
+  answer: It indicates that consecutive normalized messages have changed little under
+    the chosen update rule and tolerance. It does not certify exact posterior marginals,
+    a globally correct joint distribution, convergence from all initializations or
+    model validity.
