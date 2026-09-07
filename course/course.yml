@@ -77,6 +77,7 @@ sessions:
     block later demonstrations.
   - W2 includes a 10-point project. Use the separate SmartClass assignment entry for
     the deadline and submission.
+  notion_url: https://app.notion.com/p/W2-Graphical-Models-Conditional-Independence-and-Message-Passing-3d47fd00109f819bb2baf8f5b875cc16?source=copy_link
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
