@@ -929,9 +929,7 @@ Three summaries differ:
 
 $$
 \hat\theta_{\mathrm{MLE}}=\frac{7}{10}=0.7,
-$$
 
-$$
 \hat\theta_{\mathrm{MAP}}
 =
 \frac{9-1}{9+5-2}
@@ -1404,9 +1402,7 @@ $$
 =
 \beta\mathbf{v}_t+
 \widehat{g}_{\mathcal{B}_t}(\theta_t),
-$$
 
-$$
 \theta_{t+1}
 =
 \theta_t-
