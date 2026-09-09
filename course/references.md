@@ -16,6 +16,10 @@ https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/b
 
 https://github.com/lunalab-ai/advML
 
+https://github.com/probml/pyprobml/blob/master/notebooks/book1/04/beta_binom_post_plot.ipynb
+
+https://github.com/probml/pyprobml/blob/master/notebooks/book1/08/steepestDescentDemo.ipynb
+
 https://github.com/probml/pyprobml/tree/master/notebooks/book2
 
 ## Mathematical Foundations for Probabilistic Machine Learning
@@ -42,6 +46,10 @@ https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/b
 
 https://github.com/lunalab-ai/advML
 
+https://github.com/probml/pyprobml/blob/master/notebooks/book1/04/beta_binom_post_plot.ipynb
+
+https://github.com/probml/pyprobml/blob/master/notebooks/book1/08/steepestDescentDemo.ipynb
+
 https://github.com/probml/pyprobml/tree/master/notebooks/book1/02
 
 https://github.com/probml/pyprobml/tree/master/notebooks/book1/04
@@ -59,6 +67,18 @@ https://github.com/probml/pyprobml/tree/master/notebooks/book2
 https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-message-passing.ipynb
 
 https://colab.research.google.com/github/lunalab-ai/advML/blob/main/notebooks/student/w2-project-starter.ipynb
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/API.md
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L124
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L149
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L202
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L259
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L43
 
 https://github.com/lunalab-ai/advML/blob/main/course/handouts/w2-quiz.md
 

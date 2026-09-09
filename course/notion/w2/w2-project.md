@@ -94,3 +94,13 @@ The total is always **10**. Within a two-point category, half-point increments m
 ## Reading
 
 Murphy, *Probabilistic Machine Learning: Advanced Topics*, §§4.2.4, 4.3.6, 9.3–9.5; [official book resources](https://probml.github.io/pml-book/book2.html). The project is an original course assignment built on the W2 lab; no textbook exercise solution is supplied.
+
+## Code definitions and further study
+
+[API: arguments, results and examples](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/API.md)
+
+- [PairwiseModel](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L43): Finite undirected model represented by log potentials, not fitted parameters.
+- [enumerate_exact](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L124): Enumerate the complete joint as an independent small-model oracle.
+- [tree_sum_product](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L149): Run exact two-pass log-domain sum-product on a connected tree.
+- [loopy_sum_product](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L202): Run synchronous approximate sum-product with probability-space damping.
+- [max_marginal_tv](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L259): Return max_i 0.5*sum_k(abs(p[i,k]-q[i,k])) as a float.

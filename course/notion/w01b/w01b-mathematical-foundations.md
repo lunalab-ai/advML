@@ -26,20 +26,6 @@ By the end of this class, you should be able to:
 9. interpret gradients, Hessians, convexity, learning rates, conditioning, and stochastic gradients mathematically and geometrically;
 10. synthesize probability, statistics, and optimization in Bayesian linear regression and its posterior predictive distribution.
 
-## Today's route
-
-| Time | Topic | Central question |
-|---:|---|---|
-| 0–4 min | Prior-knowledge check | What do we already know about probability, statistics, and optimization? |
-| 4–24 min | Probability foundations | How do we represent, combine, and update uncertainty? |
-| 24–44 min | Statistical learning | How does observed data change what we believe about unknown parameters? |
-| 44–62 min | Optimization foundations | How do we compute the estimates or approximations required by learning? |
-| 62–71 min | Bayesian linear regression | How do the three foundations become one coherent model? |
-| 71–75 min | Retrieval and bridge | How does this lead to graphical models and message passing? |
-
-> **Notation policy.** Uppercase letters such as $X$ denote random variables, lowercase letters such as $x$ denote realized values, bold symbols such as $\mathbf{x}$ denote vectors, and $\mathcal{D}$ denotes an observed dataset. We use $p(\cdot)$ for both mass functions and densities when the context is clear.
-
----
 
 # 1. One learning problem, three mathematical foundations
 
@@ -1774,3 +1760,13 @@ Before the next class, review:
 - the main textbook's introduction to directed and undirected graphical models.
 
 > **Next class:** Probabilistic graphical models, an overview of inference algorithms, conditional independence, and the basic idea of message passing.
+
+## Reading the optional code and figures
+
+The figures explain different operations. In the Bayesian update plot, the horizontal axis is an unknown parameter and the posterior combines prior information with observed data. In an optimization contour plot, the axes are parameter coordinates and successive points are algorithm iterates; a visually smooth path is not a posterior distribution. State what is fixed before interpreting either image.
+
+The optional [beta-binomial notebook](https://github.com/probml/pyprobml/blob/master/notebooks/book1/04/beta_binom_post_plot.ipynb) defines `make_graph(data, save_name)`. `data` is a dictionary with prior `a,b`, likelihood `n_0,n_1`, and posterior `a,b`; `save_name` is an output filename. It plots curves and saves a figure, returning no numerical posterior. The caller must supply the consistent posterior parameters `a+n_1,b+n_0`; changing counts alone does not update the supplied posterior. JAX, Matplotlib and probml_utils are required. Likelihood uses a second vertical axis and need not integrate to one over the parameter.
+
+The optional [steepest-descent notebook](https://github.com/probml/pyprobml/blob/master/notebooks/book1/08/steepestDescentDemo.ipynb) defines `gradient_descent(x0, f, f_prime, hessian, stepsize=None)`. `x0` is a two-coordinate starting point, `f` a scalar objective, `f_prime` its two-entry gradient, and `stepsize` either a fixed scalar or None for SciPy line search. It returns three lists of visited x coordinates, y coordinates and objective values. The passed `hessian` is unused by this routine. The implementation sets the step to zero if line search fails, so an unchanged point alone does not prove convergence. Its plot title says exact line search, but the code calls a Wolfe-condition line search. Create the `figures` directory before its saving cells. These are upstream optional examples, not a claim that every upstream dependency or version has been executed in this course environment.
+
+These usage notes come from the locally preserved upstream notebooks inspected on 2026-09-09. Follow the current upstream setup when running them, and record the actual revision. The course's W2 finite-model package provides a smaller, separately validated inference exercise.

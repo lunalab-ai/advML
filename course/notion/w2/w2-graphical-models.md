@@ -264,3 +264,17 @@ Attempt these before opening the [separate quiz explanations](https://github.com
 - [Murphy's graphical-model introduction](https://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html) provides additional conceptual examples and literature pointers.
 
 External references were consulted on September 8, 2026. No original textbook PDF or solution-manual content is redistributed with this lesson.
+
+## Code definitions and further study
+
+[API: arguments, results and examples](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/API.md)
+
+- [PairwiseModel](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L43): Finite undirected model represented by log potentials, not fitted parameters.
+- [enumerate_exact](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L124): Enumerate the complete joint as an independent small-model oracle.
+- [tree_sum_product](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L149): Run exact two-pass log-domain sum-product on a connected tree.
+- [loopy_sum_product](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L202): Run synchronous approximate sum-product with probability-space damping.
+- [max_marginal_tv](https://github.com/lunalab-ai/advML/blob/2026-fall-w2-explained/src/advml_pgm.py#L259): Return max_i 0.5*sum_k(abs(p[i,k]-q[i,k])) as a float.
+
+![A message keeps the receiver state](assets/message-contract.svg)
+
+Original worked diagram · table orientation determines which index is summed out.
