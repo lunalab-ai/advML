@@ -95,3 +95,19 @@ https://probml.github.io/pml-book/book2.html
 https://www.cs.cmu.edu/~epxing/Class/10708-19/notes/lecture-04/
 
 https://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html
+
+## Variational Inference: ELBO, Mean Field, and Optimization
+
+[Lecture source](../course/notion/w3/w3-variational-inference.md)
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w3/notebooks/student/w3-variational-inference.ipynb
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w3/src/W3-API.md
+
+https://github.com/probml/pyprobml/tree/master/notebooks/book2/10
+
+https://probml.github.io/pml-book/book2.html
+
+https://pypi.org/project/gradio/6.27.0/
+
+https://www.cs.columbia.edu/~blei/papers/BleiKucukelbirMcAuliffe2017.pdf

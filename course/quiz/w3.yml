@@ -1,0 +1,35 @@
+source: course/notion/w3/w3-variational-inference.md
+provenance: Original checkpoint explanations aligned with the W3 lecture; no graded
+  assignment.
+items:
+- question: Why can ELBO maximization avoid evaluating the evidence during fixed-model
+    inference?
+  answer: The evidence is constant with respect to the variational parameters. Expanding
+    reverse KL gives log evidence minus ELBO, so maximizing the computable bound minimizes
+    that KL. An absolute numerical check still requires all normalization constants.
+- question: Does mean field assert posterior independence?
+  answer: No. It constrains the approximating distribution to a product. A dependent
+    target can have a converged mean-field approximation that misses covariance and
+    misrepresents marginal uncertainty.
+- question: Why is the optimal Gaussian mean-field variance 1/Pjj rather than Cjj?
+  answer: Holding other factors fixed leaves a quadratic in zj with precision Pjj.
+    Its normalized factor has variance 1/Pjj, a conditional variance for a Gaussian.
+    Cjj is the target marginal variance and generally differs.
+- question: What is guaranteed by an exact sequential CAVI update?
+  answer: When the coordinate normalizer and expectations exist, replacing one factor
+    by its exact coordinate optimum cannot decrease the exact ELBO. This does not
+    guarantee a global optimum in general or an exact posterior within a restricted
+    family.
+- question: Why does the log-standard-deviation gradient contain a +1?
+  answer: For a diagonal Gaussian, entropy includes the sum of log standard deviations.
+    Differentiating it with respect to each log standard deviation gives one. The
+    likelihood/prior pathwise term alone is incomplete.
+- question: Can increasing iterations eliminate every ELBO gap?
+  answer: No. It can reduce optimization error relative to the best member of the
+    chosen family. The approximation gap remains unless the family can represent the
+    posterior; at rho=.8 it is about .212340 nats here.
+- question: What distinguishes the W2 Ising variational objective from a log-evidence
+    bound?
+  answer: The expectation of the unnormalized log Ising density plus entropy lower-bounds
+    log Z. Evidence requires an explicitly conditioned joint and its normalization;
+    a partition function is not automatically an evidence probability.

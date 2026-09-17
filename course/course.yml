@@ -78,6 +78,26 @@ sessions:
   - W2 includes a 10-point project. Use the separate SmartClass assignment entry for
     the deadline and submission.
   notion_url: https://app.notion.com/p/W2-Graphical-Models-Conditional-Independence-and-Message-Passing-3d47fd00109f819bb2baf8f5b875cc16?source=copy_link
+- id: w3
+  date: '2026-09-17'
+  title: 'Variational Inference: ELBO, Mean Field, and Optimization'
+  pages:
+  - course/notion/w3/w3-variational-inference.md
+  labs:
+  - notebooks/student/w3-variational-inference.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  duration_minutes: 120
+  quiz: course/quiz/w3.yml
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w3/notebooks/student/w3-variational-inference.ipynb
+  announcement_guidance:
+  - This lesson is scheduled for Thursday, September 17, 2026. The regular Tuesday
+    timetable is unchanged.
+  - Use a CPU Colab runtime; no dataset upload is required.
+  - Compare ELBO, mean-field covariance and optimization error, then build a small
+    Gradio diagnostic app.
+  - These are in-class exercises, not a newly assigned graded project.
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
