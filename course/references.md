@@ -96,13 +96,25 @@ https://www.cs.cmu.edu/~epxing/Class/10708-19/notes/lecture-04/
 
 https://www.cs.ubc.ca/~murphyk/Bayes/bnintro.html
 
+## Research Collaboration and Evidence-Based ML Research with LUNA
+
+[Lecture source](../course/notion/w3/w3-research-methodology.md)
+
+https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects
+
+https://lunalab-ai.com/
+
+https://lunalab-ai.com/workspace/help/
+
+https://neurips.cc/public/guides/PaperChecklist
+
 ## Variational Inference: ELBO, Mean Field, and Optimization
 
-[Lecture source](../course/notion/w3/w3-variational-inference.md)
+[Lecture source](../course/notion/w4/w4-variational-inference.md)
 
-https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w3/notebooks/student/w3-variational-inference.ipynb
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w4/notebooks/student/w4-variational-inference.ipynb
 
-https://github.com/lunalab-ai/advML/blob/2026-fall-w3/src/W3-API.md
+https://github.com/lunalab-ai/advML/blob/2026-fall-w4/src/W4-API.md
 
 https://github.com/probml/pyprobml/tree/master/notebooks/book2/10
 

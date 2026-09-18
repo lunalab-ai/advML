@@ -1,31 +1,27 @@
-# Variational Inference: ELBO, Mean Field, and Optimization · Quiz explanations
+# Research Collaboration and Evidence-Based ML Research with LUNA · Quiz explanations
 
-Original checkpoint explanations aligned with the W3 lecture; no graded assignment.
+Original formative checkpoint explanations; no graded assignment.
 
-## 1. Why can ELBO maximization avoid evaluating the evidence during fixed-model inference?
+## 1. Why does closing a research issue not establish a scientific claim?
 
-The evidence is constant with respect to the variational parameters. Expanding reverse KL gives log evidence minus ELBO, so maximizing the computable bound minimizes that KL. An absolute numerical check still requires all normalization constants.
+It records workflow completion against task criteria. Scientific support still requires appropriate data, comparisons, analysis and review of limitations.
 
-## 2. Does mean field assert posterior independence?
+## 2. What should you check when a document is missing from a project view?
 
-No. It constrains the approximating distribution to a product. A dependent target can have a converged mean-field approximation that misses covariance and misrepresents marginal uncertainty.
+Check the original and authorized access, project metadata, connector scope and collection status. Missing visibility does not prove that work never occurred.
 
-## 3. Why is the optimal Gaussian mean-field variance 1/Pjj rather than Cjj?
+## 3. Why compare methods using matched run identifiers?
 
-Holding other factors fixed leaves a quadratic in zj with precision Pjj. Its normalized factor has variance 1/Pjj, a conditional variance for a Gaussian. Cjj is the target marginal variance and generally differs.
+Matching controls the evaluation conditions. Independent sorting breaks that correspondence and can hide the distribution of within-run differences.
 
-## 4. What is guaranteed by an exact sequential CAVI update?
+## 4. What does a metadata audit fail to prove?
 
-When the coordinate normalizer and expectations exist, replacing one factor by its exact coordinate optimum cannot decrease the exact ELBO. This does not guarantee a global optimum in general or an exact posterior within a restricted family.
+Nonempty fields do not verify their truth, source accessibility, absence of leakage, scientific validity, novelty or generalization.
 
-## 5. Why does the log-standard-deviation gradient contain a +1?
+## 5. When is an AI assistant right to withhold a research-readiness judgment?
 
-For a diagonal Gaussian, entropy includes the sum of log standard deviations. Differentiating it with respect to each log standard deviation gives one. The likelihood/prior pathwise term alone is incomplete.
+When the supplied or accessible records do not support it. It should identify the missing evidence rather than infer readiness from references or fluent summaries.
 
-## 6. Can increasing iterations eliminate every ELBO gap?
+## 6. How will this workflow support the Week 4 variational-inference experiment?
 
-No. It can reduce optimization error relative to the best member of the chosen family. The approximation gap remains unless the family can represent the posterior; at rho=.8 it is about .212340 nats here.
-
-## 7. What distinguishes the W2 Ising variational objective from a log-evidence bound?
-
-The expectation of the unnormalized log Ising density plus entropy lower-bounds log Z. Evidence requires an explicitly conditioned joint and its normalization; a partition function is not automatically an evidence probability.
+Record the model, inference method, exact reference, settings and diagnostics; separate convergence from approximation quality and qualify the supported claim.

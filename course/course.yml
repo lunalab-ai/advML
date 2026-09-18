@@ -79,25 +79,47 @@ sessions:
     the deadline and submission.
   notion_url: https://app.notion.com/p/W2-Graphical-Models-Conditional-Independence-and-Message-Passing-3d47fd00109f819bb2baf8f5b875cc16?source=copy_link
 - id: w3
-  date: '2026-09-17'
-  title: 'Variational Inference: ELBO, Mean Field, and Optimization'
+  date: '2026-09-15'
+  title: Research Collaboration and Evidence-Based ML Research with LUNA
   pages:
-  - course/notion/w3/w3-variational-inference.md
+  - course/notion/w3/w3-research-methodology.md
   labs:
-  - notebooks/student/w3-variational-inference.ipynb
+  - notebooks/student/w3-research-methodology.ipynb
   runtime: python
   assignment:
     requested: false
   duration_minutes: 120
   quiz: course/quiz/w3.yml
-  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w3/notebooks/student/w3-variational-inference.ipynb
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w3-research/notebooks/student/w3-research-methodology.ipynb
   announcement_guidance:
-  - This lesson is scheduled for Thursday, September 17, 2026. The regular Tuesday
-    timetable is unchanged.
-  - Use a CPU Colab runtime; no dataset upload is required.
-  - Compare ELBO, mean-field covariance and optimization error, then build a small
-    Gradio diagnostic app.
-  - These are in-class exercises, not a newly assigned graded project.
+  - This is the study guide for the September 15 class introducing LUNA and evidence-based
+    ML research methodology.
+  - The synthetic evidence-audit notebook is additional practice, not a record of
+    experiments performed in the meeting.
+  - Variational inference has moved to Week 4, Tuesday, September 22, 13:00–15:00
+    (Asia/Seoul).
+  - CPU runtime; no platform credentials or dataset upload. No new graded assignment.
+  notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-Week-3-Research-Collaboration-with-LUNA-September-15-2026-3df7fd00109f81bd914fefa90077a177
+- id: w4
+  date: '2026-09-22'
+  title: 'Variational Inference: ELBO, Mean Field, and Optimization'
+  pages:
+  - course/notion/w4/w4-variational-inference.md
+  labs:
+  - notebooks/student/w4-variational-inference.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w4.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w4/notebooks/student/w4-variational-inference.ipynb
+  notion_url: https://fancy-ballcap-a15.notion.site/2026-09-17-Advanced-ML-W3-materials-3dd7fd00109f816e88d4e5473b2bd29d
+  announcement_guidance:
+  - Rescheduled from the earlier Week 3 announcement to Tuesday, September 22, 13:00–15:00
+    (Asia/Seoul).
+  - 'Read Murphy, Advanced Topics, Chapter 10: ELBO, mean field and optimization.'
+  - Use a CPU runtime; synthetic data and supporting code are prepared automatically.
+  - These are formative exercises; no new graded assignment is introduced.
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
