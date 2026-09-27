@@ -120,6 +120,37 @@ sessions:
   - 'Read Murphy, Advanced Topics, Chapter 10: ELBO, mean field and optimization.'
   - Use a CPU runtime; synthetic data and supporting code are prepared automatically.
   - These are formative exercises; no new graded assignment is introduced.
+- id: w5
+  date: '2026-09-29'
+  title: 'Monte Carlo Inference: Importance Sampling, MCMC, and Sequential Monte Carlo'
+  pages:
+  - course/notion/w5/w5-monte-carlo-inference.md
+  - course/notion/w5/w5-inference-repair.md
+  - course/notion/w5/w5-experiment-record.md
+  - course/notion/w5/w5-code-guide.md
+  labs:
+  - notebooks/student/w5-a-monte-carlo.ipynb
+  - notebooks/student/w5-b-sequential-monte-carlo.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w5.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w5/notebooks/student/w5-a-monte-carlo.ipynb
+  announcement_guidance:
+  - Tuesday, September 29, 13:00-15:00 (Asia/Seoul). Read the repair note first if
+    expectations and uncertainty still feel unclear.
+  - 'Main reading: Murphy Advanced Topics, Chapter 7 overview; core sections in Chapters
+    11-13, as mapped in the lecture.'
+  - Run Lab A before Lab B using a CPU runtime. Code and synthetic data are prepared
+    automatically; no upload or API key.
+  - 'Lab B Colab: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w5/notebooks/student/w5-b-sequential-monte-carlo.ipynb'
+  - Predict before running. Use multiple seeds, keep data fixed, and export the Sampling
+    Explorer CSV for your comparison.
+  - A Gradio share URL lasts only while its runtime remains active. Keep the permanent
+    notebook link.
+  - These are formative exercises. No new graded assignment is introduced.
+  notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-Week-5-Monte-Carlo-Inference-September-29-2026-3e87fd00109f81fda578d703a3996150
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
