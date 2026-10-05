@@ -1,0 +1,35 @@
+source: course/notion/w6/w6-inference-rebuild.md
+provenance: Original W6 formative checkpoints; probabilistic identities follow the
+  reading map in the lesson.
+items:
+- question: Does drawing 1,000 more posterior samples give us 1,000 new sensor observations?
+  answer: No. The observations stay fixed. Samples are simulated possible hidden states
+    used to calculate an answer.
+- question: What does the normalizing denominator add up?
+  answer: The joint weights of every possible hidden path with the observed readings
+    held fixed. Their total is the evidence, 0.0872 in this example.
+- question: Why is the probability of the MAP path different from the probability
+    that the last state is one?
+  answer: The MAP path is one complete event, 111. The last-state event includes 001,
+    011, 101 and 111; their probabilities must be added.
+- question: At time 2, why must an online particle filter be compared with a filtering
+    reference rather than the full-data smoother?
+  answer: They must use the same information. The filter uses readings 1 and 2, while
+    the smoother also uses reading 3.
+- question: Can more optimization always remove the error caused by a factorized variational
+    family?
+  answer: No. Optimization changes parameters within the family. It cannot produce
+    dependence that the family excludes; local optimization can introduce an additional
+    gap.
+- question: Which uncertainty shrinks when we draw more samples while keeping the
+    observed data fixed?
+  answer: Typical numerical error of the estimator shrinks. Posterior spread remains
+    fixed. The usual inverse-square-root sample-count formula assumes independent
+    draws and finite variance.
+- question: Why must a rejected MH proposal remain as a repeated state in the chain?
+  answer: The chain stays in its current state on rejection. Its residence times contribute
+    to the intended stationary distribution; deleting repetitions changes the represented
+    distribution.
+- question: What must stay fixed to interpret a comparison as an algorithm comparison?
+  answer: The observed data, model parameters, target and query. Also record budgets,
+    seeds and the metric; changing the target answers a different comparison question.

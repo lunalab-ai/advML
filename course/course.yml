@@ -151,6 +151,36 @@ sessions:
     notebook link.
   - These are formative exercises. No new graded assignment is introduced.
   notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-Week-5-Monte-Carlo-Inference-September-29-2026-3e87fd00109f81fda578d703a3996150
+- id: w6
+  date: '2026-10-06'
+  title: 'Making Sense of Probabilistic Inference: A Weeks 1-5 Rebuild'
+  pages:
+  - course/notion/w6/w6-inference-rebuild.md
+  - course/notion/w6/w6-repair.md
+  - course/notion/w6/w6-experiment-record.md
+  - course/notion/w6/w6-code-guide.md
+  labs:
+  - notebooks/student/w6-inference-rebuild.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w6.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w6/notebooks/student/w6-inference-rebuild.ipynb
+  announcement_guidance:
+  - Tuesday, October 6, 13:00-15:00 (Asia/Seoul). This week rebuilds Weeks 1-5; BNN/GP
+    topics are deferred.
+  - Start with the repair note if normalization, marginalization or expectations feel
+    unfamiliar. Then read the main note and try the checkpoints.
+  - CPU runtime; save a copy in Drive and run from top to bottom. Setup prepares the
+    synthetic example and checks supporting code automatically. No upload, API key
+    or GPU.
+  - Predict before running. Complete the VI and repeated-sampling comparisons, then
+    add one diagnostic to the final Inference Workbench and export its CSV.
+  - A Gradio share URL works only while its runtime stays active. Keep the permanent
+    Colab link.
+  - Formative practice only; no new graded assignment.
+  notion_url: https://fancy-ballcap-a15.notion.site/3f07fd00109f812487d9c7b661b09bbd
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true

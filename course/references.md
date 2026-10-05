@@ -221,3 +221,55 @@ https://python.arviz.org/en/v0.22.0/api/generated/arviz.mcse.html
 https://python.arviz.org/en/v0.22.0/api/generated/arviz.rhat.html
 
 https://www.gradio.app/docs/gradio/blocks
+
+## Making Sense of Probabilistic Inference: A Weeks 1-5 Rebuild
+
+[Lecture source](../course/notion/w6/w6-inference-rebuild.md)
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w6/notebooks/student/w6-inference-rebuild.ipynb
+
+https://mc-stan.org/docs/reference-manual/analysis.html
+
+https://probml.github.io/pml-book/book2.html
+
+https://www.cs.columbia.edu/~blei/papers/BleiKucukelbirMcAuliffe2017.pdf
+
+[Lecture source](../course/notion/w6/w6-repair.md)
+
+[Lecture source](../course/notion/w6/w6-experiment-record.md)
+
+[Lecture source](../course/notion/w6/w6-code-guide.md)
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_pgm.py#L124
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_pgm.py#L149
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_pgm.py#L43
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L104
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L13
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L137
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L156
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L174
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L223
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L34
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L46
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L61
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L71
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild.py#L90
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild_app.py#L11
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild_app.py#L59
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w6/src/advml_rebuild_app.py#L81
