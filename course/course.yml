@@ -181,6 +181,37 @@ sessions:
     Colab link.
   - Formative practice only; no new graded assignment.
   notion_url: https://fancy-ballcap-a15.notion.site/3f07fd00109f812487d9c7b661b09bbd
+- id: w7
+  date: '2026-10-13'
+  title: From Predictive Models to Bayesian Functions
+  pages:
+  - course/notion/w7/w7-predictive-models.md
+  - course/notion/w7/w7-worked-calculations.md
+  - course/notion/w7/w7-experiment-record.md
+  - course/notion/w7/w7-code-guide.md
+  labs:
+  - notebooks/student/w7-a-predictive-models.ipynb
+  - notebooks/student/w7-b-bayesian-functions.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w7.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w7/notebooks/student/w7-a-predictive-models.ipynb
+  announcement_guidance:
+  - Tuesday, October 13, 13:00–15:00 (Asia/Seoul). We connect predictive models, GLMs,
+    neural networks, Bayesian uncertainty and Gaussian processes.
+  - Read the main note and the five worked calculations. Begin with the scalar posterior
+    if matrix notation feels unfamiliar.
+  - Both CPU notebooks run independently. Save a copy in Drive and run from the top;
+    no upload, API key or GPU.
+  - 'Lab B Colab: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w7/notebooks/student/w7-b-bayesian-functions.ipynb'
+  - Predict before changing a setting. Compare the same data, distinguish latent-function
+    from future-response intervals, and export a CSV from the final web app.
+  - A Gradio share URL lasts only while the runtime is active. Keep the notebook link
+    as the permanent entry point.
+  - These are formative activities. No new graded assignment is introduced.
+  notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W7-From-Predictive-Models-to-Bayesian-Functions-October-13-2026-3f77fd00109f8109abe8c400816aeb5b
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
