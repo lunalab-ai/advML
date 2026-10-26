@@ -212,6 +212,21 @@ sessions:
     as the permanent entry point.
   - These are formative activities. No new graded assignment is introduced.
   notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W7-From-Predictive-Models-to-Bayesian-Functions-October-13-2026-3f77fd00109f8109abe8c400816aeb5b
+- id: w9
+  date: '2026-10-27'
+  title: Midterm Review and Board Notes
+  pages:
+  - course/notion/w9/w9-midterm-review-notes.md
+  labs: []
+  runtime: none
+  assignment:
+    requested: false
+  quiz: null
+  material_mode: board-review-pdf
+  board_review_parts: true
+  board_review_questions: 5
+  board_review_writing_mm: 100
+  runtime_label: Board review; no new lab or submission
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
@@ -234,3 +249,5 @@ lesson_policy:
   legacy_sessions:
   - w01a
   - w01b
+pdf_board_review_pages:
+- course/notion/w9/w9-midterm-review-notes.md

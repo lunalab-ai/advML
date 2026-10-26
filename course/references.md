@@ -355,3 +355,9 @@ https://github.com/lunalab-ai/advML/blob/2026-fall-w7/src/advml_predictive_app.p
 https://numpy.org/doc/stable/reference/arrays.html
 
 https://www.gradio.app/docs/gradio/blocks
+
+## Midterm Review and Board Notes
+
+[Lecture source](../course/notion/w9/w9-midterm-review-notes.md)
+
+https://github.com/lunalab-ai/advML

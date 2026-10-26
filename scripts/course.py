@@ -20,12 +20,14 @@ from markdown_it import MarkdownIt
 
 from check_public_release import scan
 from validate_notion_bundle import validate
+from board_review_parts import kit_pdf_only, render_parts
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_ROOTS = ("course", "notebooks/student", "labs/student", "src", "data/sample")
 PUBLIC_FILES = (
     "README.md",
     "scripts/course.py",
+    "scripts/board_review_parts.py",
     "scripts/check_public_release.py",
     "scripts/validate_notion_bundle.py",
     "requirements.txt",
@@ -42,6 +44,18 @@ h1{font-size:21pt} h2{font-size:15pt} h1,h2,h3{break-after:avoid} img{max-width:
 table{width:100%;border-collapse:collapse;font-size:9pt} th,td{border:1px solid #ccd5df;padding:6px} th{background:#edf2f7}
 thead{display:table-header-group} tr,img{break-inside:avoid} pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f5f7;padding:10px}
 blockquote{border-left:3px solid #a4bbd4;margin-left:0;padding-left:12px} a{color:#185c99} p,li{orphans:3;widows:3}"""
+
+
+BOARD_REVIEW_CSS = """
+@page{size:A4;margin:15mm 18mm 16mm}*{box-sizing:border-box}
+body{font-size:11pt;line-height:1.4;color:#20242a}h1{font-size:22pt}h2{font-size:14pt}h3{font-size:10.5pt}
+p{margin:2.1mm 0}li{margin:1.2mm 0}pre{font-size:9.8pt;line-height:1.35;padding:2.5mm;break-inside:avoid}
+table{font-size:10pt;line-height:1.35;margin:3mm 0;break-inside:avoid}th,td{padding:1.6mm 2mm}
+.pdf-question{break-before:page;break-inside:auto}.board-reflection{break-before:page}
+.board-writing-space{height:80mm;break-inside:avoid;border:1px solid #9da5ae;margin-top:4mm;position:relative;
+background:white}
+.board-writing-label{position:absolute;top:1.5mm;left:2.5mm;padding:0 1mm;background:white;font-size:9pt;color:#4d5661}
+"""
 
 
 def safe(root: Path, relative: str) -> Path:
@@ -120,6 +134,33 @@ def render(text, source, root, repository):
                 rel = p.relative_to(root.resolve()).as_posix()
                 c.attrSet(key, f"https://github.com/{repository}/blob/main/{rel}")
     body = md.renderer.render(tokens, md.options, {})
+    worksheet = source.resolve().relative_to(root.resolve()).as_posix() in config.get("pdf_question_pages", [])
+    board_review = source.resolve().relative_to(root.resolve()).as_posix() in config.get("pdf_board_review_pages", [])
+    part_session = next((item for item in config.get("sessions", [])
+        if source.resolve().relative_to(root.resolve()).as_posix() in item.get("pages", [])
+        and item.get("material_mode") == "board-review-pdf" and item.get("board_review_parts")), None) if board_review else None
+    if (worksheet or board_review) and not part_session:
+        # Keep each numbered question, its prompt and writing space together.
+        # Opt-in prevents repagination of previously published lecture notes.
+        body = re.sub(r'(<h2>Q\d{2}\s*·[\s\S]*?)(?=<h2>|$)',
+                      r'<section class="pdf-question">\1</section>', body)
+    if board_review and not part_session:
+        if not re.search(r'<h2>Q\d{2}\s*·', body):
+            raise ValueError('Board review requires numbered Q01-style questions')
+        def writing_space(match):
+            fragment = match.group(1)
+            label = '<h3>판서·계산 메모</h3>'
+            if fragment.count(label) != 1:
+                raise ValueError('Each board-review question requires exactly one writing space heading')
+            question_id = re.search(r'<h2>(Q\d{2})', fragment).group(1)
+            box = ('<div class="board-writing-space" data-board-question="' + question_id + '">'
+                   '<span class="board-writing-label">' + question_id + ' · 판서·계산 메모</span></div>')
+            return '<section class="pdf-question">' + fragment.replace(label, box) + '</section>'
+        body = re.sub(r'<section class="pdf-question">([\s\S]*?)</section>', writing_space, body)
+        body = body.replace('<h2>수업 후 복습 기록</h2>', '<h2 class="board-reflection">수업 후 복습 기록</h2>')
+    if part_session:
+        body = render_parts(body, question_count=part_session.get("board_review_questions"),
+                            writing_mm=part_session.get("board_review_writing_mm", 100))
     for key, formula in formulas.items(): body = body.replace(key, formula)
     math_script = ""
     if formulas:
@@ -127,7 +168,8 @@ def render(text, source, root, repository):
         math_script = '<script>MathJax={startup:{typeset:true},svg:{fontCache:"local"}};</script><script>' + asset.read_text(encoding="utf-8") + '</script>'
     return (
         '<!doctype html><html lang="' + escape(config.get("language", "ko")) + '"><meta charset="utf-8"><style>'
-        + CSS
+        + CSS + (".pdf-question{break-inside:avoid}" if worksheet else "") + (BOARD_REVIEW_CSS if board_review else "")
+        + ("table th:last-child,table td:last-child{width:14mm;min-width:14mm;white-space:nowrap}" if part_session else "")
         + "</style><body>"
         + body + math_script
         + "</body></html>"
@@ -243,7 +285,7 @@ def validate_course_contract(root, c):
     for session in c.get("sessions", []):
         if session["id"] in policy.get("legacy_sessions", []):
             continue
-        if policy.get("automatic_notebooks"):
+        if policy.get("automatic_notebooks") and not kit_pdf_only(root, session):
             if not any(p.endswith(".ipynb") for p in session.get("labs", [])) or not session.get("colab_url"):
                 raise ValueError("Notebook and Colab URL required: " + session["id"])
         if policy.get("ask_assignment"):
@@ -320,7 +362,12 @@ def build(root=ROOT):
                 raise ValueError(f"Broken PDF image: {p}")
             dest = root / "course/handouts" / f"{p.stem}.pdf"
             dest.parent.mkdir(parents=True, exist_ok=True)
-            tab.pdf(path=str(dest), prefer_css_page_size=True, print_background=True)
+            pdf_options = {}
+            if (p.relative_to(root).as_posix() in c.get("pdf_question_pages", [])
+                    or p.relative_to(root).as_posix() in c.get("pdf_board_review_pages", [])):
+                pdf_options = dict(display_header_footer=True, header_template="<span></span>",
+                    footer_template='<div style="font-size:8px;width:100%;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>')
+            tab.pdf(path=str(dest), prefer_css_page_size=True, print_background=True, **pdf_options)
         browser.close()
     hub(root, c)
     errors = scan(root / "course")
@@ -362,6 +409,25 @@ def notices(root=ROOT, sid=None):
         if not s.get("pages"):
             continue
         base = "https://github.com/" + c["repository"]
+        if kit_pdf_only(root, s):
+            pdf = "course/handouts/" + Path(s["pages"][0]).stem + ".pdf"
+            if not safe(root, pdf).is_file():
+                raise ValueError("Missing reviewed student writing PDF")
+            if c.get("language") == "en":
+                body = (f"[{s['id'].upper()}] {s['title']}\n\n"
+                        f"{c['title']} · {s.get('date')}\n\n"
+                        "Review the midterm questions and the original marking criteria. "
+                        "Use the blank areas to record the instructor's board work.\n\n"
+                        "Board-note PDF\n" + base + "/raw/main/" + pdf + "\n\n"
+                        "Marking is planned to finish this week. Results will be announced after marking is complete.\n")
+            else:
+                body = (f"[{s['id'].upper()}] {s['title']}\n\n"
+                        "중간고사 문제와 평가 기준을 확인하고 필기란에 판서를 정리해 주세요.\n\n"
+                        + base + "/raw/main/" + pdf + "\n\n"
+                        "중간고사 채점은 이번 주 중 마무리할 예정입니다. 채점이 완료된 후 결과를 공지하겠습니다.\n")
+            write(root / "instructor/announcements" / (s["id"] + "-smartclass.txt"), body)
+            print(body)
+            continue
         links = []
         if s.get("notion_url"):
             links.append("Notion 강의노트\n" + s["notion_url"])
