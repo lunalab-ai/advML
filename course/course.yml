@@ -227,6 +227,28 @@ sessions:
   board_review_questions: 5
   board_review_writing_mm: 100
   runtime_label: Board review; no new lab or submission
+- id: w10
+  date: '2026-11-03'
+  title: W4-W7 Conceptual Rebuild and Midterm Q3-Q5
+  pages:
+  - course/notion/w10/w10-inference-to-prediction.md
+  - course/notion/w10/w10-original-question-workbook.md
+  - course/notion/w10/w10-code-guide.md
+  labs:
+  - notebooks/student/w10-inference-to-prediction.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w10.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w10/notebooks/student/w10-inference-to-prediction.ipynb
+  announcement_guidance:
+  - Review W4–W7 concepts, then work all nine original Q3–Q5 subparts in the blank
+    workbook.
+  - Run the independent CPU notebook from the top; predict, debug, compare and modify
+    your diagnostic in the three-tab app.
+  - No new graded assignment or submission deadline.
+  notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W10-Inference-to-Prediction-November-3-2026-40c7fd00109f81738dacde682f9b50e6
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true

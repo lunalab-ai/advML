@@ -361,3 +361,35 @@ https://www.gradio.app/docs/gradio/blocks
 [Lecture source](../course/notion/w9/w9-midterm-review-notes.md)
 
 https://github.com/lunalab-ai/advML
+
+## W4-W7 Conceptual Rebuild and Midterm Q3-Q5
+
+[Lecture source](../course/notion/w10/w10-inference-to-prediction.md)
+
+https://probml.github.io/pml-book/book2.html
+
+[Lecture source](../course/notion/w10/w10-original-question-workbook.md)
+
+[Lecture source](../course/notion/w10/w10-code-guide.md)
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L131
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L162
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L181
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L30
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L70
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review.py#L97
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L102
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L152
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L40
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L51
+
+https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L90
