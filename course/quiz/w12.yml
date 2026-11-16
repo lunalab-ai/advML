@@ -1,0 +1,15 @@
+source: course/notion/w12/w12-calculation-workbook.md
+provenance: Six original formative checks for the approved W12 scope.
+items:
+- question: Which terms do you need to generate one observation from a latent-variable model?
+  answer: Draw one z from the prior, then draw x from the conditional decoder distribution at that z.
+- question: What normalizes the two joint masses after observing the light turn on?
+  answer: Divide both joint masses by their sum, the evidence for the observed event.
+- question: Which KL is zero when the inference distribution equals the true posterior?
+  answer: The posterior KL that measures the evidence gap. The encoder-to-prior KL can remain positive.
+- question: Why does the scale use half of log variance in the exponent?
+  answer: Standard deviation is the square root of variance, so its logarithm is half the log variance.
+- question: Which reductions keep the VAE loss on a per-image scale?
+  answer: Sum negative log-likelihood over pixels, sum KL over latent coordinates, combine the two per image, then average images.
+- question: How do prior generation and latent interpolation choose their decoder inputs?
+  answer: Prior generation samples z from the prior. Interpolation chooses points along a segment between two specified codes. The endpoints in the lab are encoder means.

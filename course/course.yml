@@ -249,6 +249,30 @@ sessions:
     your diagnostic in the three-tab app.
   - No new graded assignment or submission deadline.
   notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W10-Inference-to-Prediction-November-3-2026-40c7fd00109f81738dacde682f9b50e6
+- id: w12
+  date: '2026-11-17'
+  title: Generative Models, Latent Variable Models, and Variational Autoencoders
+  pages:
+  - course/notion/w12/w12-generative-models-and-vae.md
+  - course/notion/w12/w12-calculation-workbook.md
+  - course/notion/w12/w12-code-guide.md
+  labs:
+  - notebooks/student/w12-a-exact-inference.ipynb
+  - notebooks/student/w12-b-train-a-vae.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  quiz: course/quiz/w12.yml
+  duration_minutes: 120
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-a-exact-inference.ipynb
+  announcement_guidance:
+  - Tuesday, November 17, 13:00–15:00 (Asia/Seoul). Read the W12 note and keep the
+    calculation workbook open.
+  - Lab A checks a two-state posterior, the ELBO gap and Gaussian reparameterization.
+  - In Lab B, train a small CPU VAE, edit its loss and compare the same held-out images.
+  - 'Lab B Colab: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-b-train-a-vae.ipynb'
+  - No new graded assignment or submission deadline.
+  notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W12-Generative-Models-Latent-Variable-Models-and-Variational-Autoencoders-November-41a7fd00109f814da914c7648cd97910
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true

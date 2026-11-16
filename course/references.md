@@ -393,3 +393,25 @@ https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L
 https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L51
 
 https://github.com/lunalab-ai/advML/blob/2026-fall-w10/src/advml_review_app.py#L90
+
+## Generative Models, Latent Variable Models, and Variational Autoencoders
+
+[Lecture source](../course/notion/w12/w12-generative-models-and-vae.md)
+
+https://arxiv.org/abs/1312.6114
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-a-exact-inference.ipynb
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-b-train-a-vae.ipynb
+
+https://probml.github.io/pml-book/book2.html
+
+https://proceedings.mlr.press/v32/rezende14.html
+
+[Lecture source](../course/notion/w12/w12-calculation-workbook.md)
+
+[Lecture source](../course/notion/w12/w12-code-guide.md)
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-a-exact-inference.ipynb
+
+https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-b-train-a-vae.ipynb
