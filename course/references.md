@@ -415,3 +415,11 @@ https://proceedings.mlr.press/v32/rezende14.html
 https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-a-exact-inference.ipynb
 
 https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-b-train-a-vae.ipynb
+
+## From VAEs to Diffusion Models — Why Predict Noise?
+
+[Lecture source](../course/notion/w13/w13-diffusion-models.md)
+
+https://arxiv.org/html/2006.11239#S3
+
+https://probml.github.io/pml-book/book2.html

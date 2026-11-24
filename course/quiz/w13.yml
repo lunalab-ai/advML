@@ -1,0 +1,13 @@
+source: course/notion/w13/w13-diffusion-models.md
+provenance: Original formative checks for the approved W13 lecture.
+items:
+- question: Which parameters does the VAE encoder learn in the Gaussian example?
+  answer: The encoder learns functions of the input that set the latent Gaussian mean and scale.
+- question: Which variance appears in a direct draw of the forward marginal?
+  answer: The accumulated variance is one minus the product of the alpha coefficients through time t.
+- question: Which quantity supplies the supervised label for the noise predictor?
+  answer: The Gaussian noise drawn when constructing the corrupted data point at the sampled time.
+- question: Why can two reverse samples from a shared state differ?
+  answer: The conditional mean is shared and the Gaussian step noise is drawn independently. In this notebook the variance is zero at time 1.
+- question: What could a pooled count across both circles conceal?
+  answer: A generated sample could concentrate its points in one component. The separate left and right counts reveal that imbalance.

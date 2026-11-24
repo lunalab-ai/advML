@@ -273,6 +273,25 @@ sessions:
   - 'Lab B Colab: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w12/notebooks/student/w12-b-train-a-vae.ipynb'
   - No new graded assignment or submission deadline.
   notion_url: https://fancy-ballcap-a15.notion.site/Advanced-ML-W12-Generative-Models-Latent-Variable-Models-and-Variational-Autoencoders-November-41a7fd00109f814da914c7648cd97910
+- id: w13
+  date: '2026-11-24'
+  title: From VAEs to Diffusion Models — Why Predict Noise?
+  pages:
+  - course/notion/w13/w13-diffusion-models.md
+  labs:
+  - notebooks/student/w13-diffusion.ipynb
+  runtime: python
+  assignment:
+    requested: false
+  duration_minutes: 60
+  quiz: course/quiz/w13.yml
+  colab_url: https://colab.research.google.com/github/lunalab-ai/advML/blob/2026-fall-w13/notebooks/student/w13-diffusion.ipynb
+  announcement_guidance:
+  - The English slides, CPU notebook and formative exercises are for the 60-minute
+    class.
+  - Projection slides (PDF) https://raw.githubusercontent.com/lunalab-ai/advML/2026-fall-w13/course/handouts/w13-diffusion-slides.pdf
+  - The notebook generates its own data. Use a CPU runtime and run all cells from
+    top to bottom.
 show_supplements: false
 hero: course/notion/w01b/assets/00_class_banner.png
 math: true
